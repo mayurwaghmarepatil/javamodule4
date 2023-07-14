@@ -1,0 +1,118 @@
+Q1.Write a program to show Interface Example in java?
+
+interface printable{  
+void print();  
+}  
+class A6 implements printable{  
+public void print(){System.out.println("Hello");}  
+  
+public static void main(String args[]){  
+A6 obj = new A6();  
+obj.print();  
+ }  
+}  
+
+Q2.Write a program a Program with 2 concrete method and 2 abstract method in java ?
+
+abstract class AbstractExample {   
+    abstract void display(); 
+    abstract void display2(); 
+   
+      
+    void show()  
+    {  
+        System.out.println("Concrete method of abstract class");  
+    }  
+    void demo()
+{
+   System.out.println("second concrete method of abstract class");
+}  
+class SubClass extends AbstractExample {    
+    void display()  
+    {  
+        System.out.println("Abstract method implemented");  
+    } 
+    void display2(){
+      System.out.println("second abstract method implementation");    
+    } 
+}  
+public class AbstractClass{  
+   
+    public static void main(String args[])  
+    {  
+        SubClass obj = new SubClass();  
+        obj.display();  
+        obj.display1();  
+        obj.show(); 
+        obj.demo(); 
+    }  
+}  
+
+Q3.Write a program  to show the use of functional interface in java?
+
+class Test {
+	public static void main(String args[])
+	{
+		new Thread(new Runnable() {
+			@Override public void run()
+			{
+				System.out.println("New thread created");
+			}
+		}).start();
+	}
+}
+
+Q4.What is an interface in Java?
+
+An Interface in Java programming language is defined as an abstract type used to specify the behavior of a class.
+ An interface in Java is a blueprint of a behaviour.
+ A Java interface contains static constants and abstract methods.
+
+Q5.What is the use of interface in Java?
+
+
+Provides communication − One of the uses of the interface is to provide communication. Through interface you can specify how you want the methods and fields of a particular type.
+Multiple inheritance  − Java doesn’t support multiple inheritance, using interfaces you can achieve multiple inheritance 
+
+
+Q6.What is the lambda expression of Java 8?
+
+In Java, Lambda expressions basically express instances of functional interfaces (An interface with a single abstract method is called a functional interface).
+ Lambda Expressions in Java are the same as lambda functions which are the short block of code that accepts input as parameters and returns a resultant value.
+ Lambda Expressions are recently included in Java SE 8. 
+
+Lambda Expression with Zero parameter 
+() -> System.out.println("Zero parameter lambda");
+
+Lambda Expression with Single parameter
+(p) -> System.out.println("One parameter: " + p);
+
+Lambda Expression with Multiple parameters
+(p1, p2) -> System.out.println("Multiple parameters: " + p1 + ", " + p2);
+
+Q7.Can you pass lambda expressions to a method? When?
+
+A lambda expression passed in a method that has an argument of type of functional interface. If we need to pass a lambda expression as an argument, the type of parameter receiving the lambda expression argument must be of a functional interface type.
+
+In the below example, the lambda expression can be passed in a method which argument's type is "TestInterface". 
+
+Q8.What is the functional interface in Java 8?
+
+A functional interface is an interface that contains only one abstract method.
+ They can have only one functionality to exhibit.
+ From Java 8 onwards, lambda expressions can be used to represent the instance of a functional interface.
+ A functional interface can have any number of default methods.
+
+Q9.What is the benefit of lambda expressions in Java 8?
+
+1.Fewer Lines of Code − One of the most benefits of a lambda expression is to reduce the amount of code. We know that lambda expressions can be used only with a functional interface. For instance, Runnable is a functional interface, so we can easily apply lambda expressions.
+2.Sequential and Parallel execution support by passing behavior as an argument in methods − By using Stream API in Java 8, the functions are passed to collection methods. Now it is the responsibility of collection for processing the elements either in a sequential or parallel manner.
+3.Higher Efficiency − By using Stream API and lambda expressions, we can achieve higher efficiency (parallel execution) in case of bulk operations on collections. Also, lambda expression helps in achieving the internal iteration of collections rather than external iteration.
+
+Q10.Is it mandatory for a lambda expression to have parameters?
+
+no
+The body of a lambda expression can contain zero, one, or more statements.
+When there is a single statement curly brackets are not mandatory and the return type of the anonymous function is the same as that of the body expression.
+When there is more than one statement, then these must be enclosed in curly brackets (a code block) and the return type of the anonymous function is the same as the type of the value returned within the code block, or void if nothing is returned.
+
